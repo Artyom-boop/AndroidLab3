@@ -27,7 +27,7 @@ class Activity3 : AppCompatActivity() {
                 Intent(
                     this,
                     Activity2::class.java
-                ).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                ).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             )
         }
         setContentView(binding.root)

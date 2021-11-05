@@ -2,6 +2,7 @@ package com.example.androidlab3
 
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -25,7 +26,7 @@ class Activity2 : AppCompatActivity() {
                 Intent(
                     this,
                     Activity3::class.java
-                ).setFlags(FLAG_ACTIVITY_CLEAR_TOP)
+                ).setFlags(FLAG_ACTIVITY_NEW_TASK)
             )
         }
         setContentView(binding.root)
