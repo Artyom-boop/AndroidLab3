@@ -3,58 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/Fragment1">
+    app:startDestination="@id/fragment1">
 
     <fragment
-        android:id="@+id/Fragment1"
-        android:name="com.example.androidlab3.Activity1"
-        android:label="@string/fragment1_label"
-        tools:layout="@layout/activity1">
-
+        android:id="@+id/fragment1"
+        android:name="com.example.androidlab3.Fragment1"
+        android:label="fragment1"
+        tools:layout="@layout/fragment1">
         <action
-            android:id="@+id/action_Fragment1_to_Fragment2"
-            app:destination="@id/Fragment2" />
-        <action
-            android:id="@+id/action_Fragment1_to_Fragment4"
-            app:destination="@id/Fragment4" />
+            android:id="@+id/fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:popUpToInclusive="false" />
+        <action android:id="@+id/menu_about"
+            app:destination="@+id/about" />
     </fragment>
     <fragment
-        android:id="@+id/Fragment2"
-        android:name="com.example.androidlab3.Activity2"
-        android:label="@string/fragment2_label"
-        tools:layout="@layout/activity2">
-
+        android:id="@+id/fragment2"
+        android:name="com.example.androidlab3.Fragment2"
+        android:label="fragment2"
+        tools:layout="@layout/fragment2" >
         <action
-            android:id="@+id/action_Fragment2_to_Fragment1"
-            app:destination="@id/Fragment1" />
+            android:id="@+id/fragment2_to_fragment3"
+            app:destination="@id/fragment3"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
         <action
-            android:id="@+id/action_Fragment2_to_Fragment3"
-            app:destination="@id/Fragment3" />
-        <action
-            android:id="@+id/action_Fragment2_to_Fragment4"
-            app:destination="@id/Fragment4" />
+            android:id="@+id/fragment2_to_fragment1"
+            app:destination="@id/fragment1"
+            app:popUpTo="@id/fragment1"
+            app:popUpToInclusive="true" />
+        <action android:id="@+id/menu_about"
+            app:destination="@+id/about" />
     </fragment>
     <fragment
-        android:id="@+id/Fragment3"
-        android:name="com.example.androidlab3.Activity3"
-        android:label="@string/fragment3_label"
-        tools:layout="@layout/activity3">
-
+        android:id="@+id/fragment3"
+        android:name="com.example.androidlab3.Fragment3"
+        android:label="fragment3"
+        tools:layout="@layout/fragment3" >
         <action
-            android:id="@+id/action_Fragment3_to_Fragment1"
-            app:destination="@id/Fragment1" />
+            android:id="@+id/fragment3_to_fragment2"
+            app:destination="@id/fragment2"
+            app:popUpTo="@id/fragment2"
+            app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_Fragment3_to_Fragment2"
-            app:destination="@id/Fragment2" />
-        <action
-            android:id="@+id/action_Fragment3_to_Fragment4"
-            app:destination="@id/Fragment4" />
+            android:id="@+id/fragment3_to_fragment1"
+            app:destination="@id/fragment1"
+            app:popUpTo="@id/fragment1"
+            app:popUpToInclusive="true" />
+        <action android:id="@+id/menu_about"
+            app:destination="@+id/about" />
     </fragment>
-    <fragment
-        android:id="@+id/Fragment4"
+    <activity
+        android:id="@+id/about"
         android:name="com.example.androidlab3.ActivityAbout"
-        android:label="@string/fragment4_label"
-        tools:layout="@layout/activity_about">
-    </fragment>
-
+        android:label="activity_about"
+        tools:layout="@layout/activity_about" />
 </navigation>

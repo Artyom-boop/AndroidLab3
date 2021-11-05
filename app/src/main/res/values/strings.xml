@@ -1,16 +1,6 @@
 <resources>
-    <string name="app_name">lab2Task2</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="fragment1_label">Fragment1</string>
-    <string name="fragment2_label">Fragment2</string>
-    <string name="fragment3_label">Fragment3</string>
-    <string name="fragment4_label">Fragment4</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="app_name">lab3Task5</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="activity_1">activity 1</string>
     <string name="activity_about">activity about</string>
     <string name="to_second">to second</string>
