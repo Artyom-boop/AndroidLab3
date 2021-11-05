@@ -1,6 +1,7 @@
 package com.example.androidlab3
 
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -20,11 +21,11 @@ class Activity2 : AppCompatActivity() {
             finish()
         }
         binding.toThird.setOnClickListener {
-            startActivityForResult(
+            startActivity(
                 Intent(
                     this,
                     Activity3::class.java
-                ), 1
+                ).setFlags(FLAG_ACTIVITY_CLEAR_TOP)
             )
         }
         setContentView(binding.root)
@@ -36,13 +37,6 @@ class Activity2 : AppCompatActivity() {
         return true
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            finish()
-        }
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.activity_about -> {
@@ -52,5 +46,4 @@ class Activity2 : AppCompatActivity() {
             else -> false
         }
     }
-
 }

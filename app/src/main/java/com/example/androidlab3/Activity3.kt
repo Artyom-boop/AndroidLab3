@@ -15,11 +15,20 @@ class Activity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Activity3Binding.inflate(layoutInflater)
         binding.toFirst.setOnClickListener {
-            setResult(RESULT_OK)
-            finish()
+            startActivity(
+                Intent(
+                    this,
+                    Activity1::class.java
+                ).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            )
         }
         binding.toSecond.setOnClickListener {
-            finish()
+            startActivity(
+                Intent(
+                    this,
+                    Activity2::class.java
+                ).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            )
         }
         setContentView(binding.root)
     }
@@ -39,5 +48,4 @@ class Activity3 : AppCompatActivity() {
             else -> false
         }
     }
-
 }
