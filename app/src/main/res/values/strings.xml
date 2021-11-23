@@ -9,4 +9,5 @@
     <string name="to_third">to third</string>
     <string name="activity_3">activity 3</string>
     <string name="about">TextView</string>
+    <string name="title_about">about</string>
 </resources>

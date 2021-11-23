@@ -15,7 +15,7 @@ class Fragment1 : Fragment() {
     ): View {
         val binding = Fragment1Binding.inflate(layoutInflater)
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             navigationController.navigate(R.id.fragment1_to_fragment2)
         }
         setHasOptionsMenu(true)
