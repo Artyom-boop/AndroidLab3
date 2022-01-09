@@ -8,48 +8,37 @@
     <fragment
         android:id="@+id/fragment1"
         android:name="com.example.androidlab3.Fragment1"
-        android:label="fragment1"
-        tools:layout="@layout/fragment1">
+        android:label="Fragment1" >
         <action
-            android:id="@+id/fragment1_to_fragment2"
-            app:destination="@id/fragment2"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_to2"
+            app:destination="@id/fragment2" />
         <action android:id="@+id/menu_about"
             app:destination="@+id/about" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
         android:name="com.example.androidlab3.Fragment2"
-        android:label="fragment2"
-        tools:layout="@layout/fragment2" >
+        android:label="Fragment2" >
         <action
-            android:id="@+id/fragment2_to_fragment3"
-            app:destination="@id/fragment3"
-            app:launchSingleTop="false"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_to3"
+            app:destination="@id/fragment3" />
         <action
-            android:id="@+id/fragment2_to_fragment1"
-            app:destination="@id/fragment1"
-            app:popUpTo="@id/fragment1"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_to1"
+            app:popUpTo="@id/fragment1" />
         <action android:id="@+id/menu_about"
             app:destination="@+id/about" />
     </fragment>
     <fragment
         android:id="@+id/fragment3"
         android:name="com.example.androidlab3.Fragment3"
-        android:label="fragment3"
-        tools:layout="@layout/fragment3" >
+        android:label="Fragment3" >
         <action
-            android:id="@+id/fragment3_to_fragment2"
-            app:destination="@id/fragment2"
-            app:popUpTo="@id/fragment2"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_to2"
+            app:popUpTo="@id/fragment2" />
         <action
-            android:id="@+id/fragment3_to_fragment1"
-            app:destination="@id/fragment1"
+            android:id="@+id/action_to1"
             app:popUpTo="@id/fragment1"
-            app:popUpToInclusive="true" />
+            />
         <action android:id="@+id/menu_about"
             app:destination="@+id/about" />
     </fragment>
